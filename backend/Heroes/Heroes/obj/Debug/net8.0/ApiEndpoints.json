@@ -1,0 +1,108 @@
+[
+  {
+    "ContainingType": "Heroes.Controllers.AccountController",
+    "Method": "Login",
+    "RelativePath": "api/Account/login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "loginModel",
+        "Type": "Heroes.Models.LoginModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Heroes.Controllers.AccountController",
+    "Method": "Signup",
+    "RelativePath": "api/Account/signup",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "signupModel",
+        "Type": "Heroes.Models.SignupModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Heroes.Controllers.HeroesController",
+    "Method": "CreateHero",
+    "RelativePath": "api/Heroes",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "newHeroModel",
+        "Type": "Heroes.Models.NewHeroModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Heroes.Controllers.HeroesController",
+    "Method": "GetAllAvailableHeroes",
+    "RelativePath": "api/Heroes",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Heroes.Controllers.HeroesController",
+    "Method": "AddHeroToTrainer",
+    "RelativePath": "api/Heroes/add-to-trainer/{heroId}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "heroId",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Heroes.Controllers.HeroesController",
+    "Method": "TrainHero",
+    "RelativePath": "api/Heroes/train/{heroId}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "heroId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Heroes.Controllers.HeroesController",
+    "Method": "GetAllHeroesByUserName",
+    "RelativePath": "api/Heroes/user-heroes",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userName",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]
