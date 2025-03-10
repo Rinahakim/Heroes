@@ -1,0 +1,25 @@
+<div class="header">Training
+    <button class="backbtn" (click)="onClickBack()">back</button>
+</div>
+<div class="container" *ngFor="let hero of heroes">
+    <div class="hero"> 
+        <img [src]= hero.urlImg class="img">
+        <div class="text">Hero Name:</div>
+        <div>{{hero.name}}</div>
+        <div class="text">Ability:</div>
+        <div>{{hero.heroAbility}}</div>
+        <div class="text">Id:</div>
+        <div>{{hero.id | slice:0:4}}</div>
+        <div class="text" *ngIf="isStartedTraining">Started training on:</div>
+        <div>{{hero.startedTraining}}</div>
+        <div class="text">Suit color:</div>
+        <div>{{hero.suitColor}}</div>
+        <div class="text">Starting Power:</div>
+        <div>{{hero.startingPower}}</div>
+        <div class="text">Current Power:</div>
+        <div>{{hero.currentPower}}</div>
+        <div class="text">Number of training:</div>
+        <div>{{hero.dailyTrainingCount}}</div>
+        <button (click)="onClickPower(hero.id)">Give Power</button>
+    </div>
+</div>

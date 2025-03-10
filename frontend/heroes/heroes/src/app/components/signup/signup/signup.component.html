@@ -1,0 +1,30 @@
+<div class="header">Welcome to training plan</div>
+<div class="align-center">
+    <div class="container">
+        <form [formGroup]="form" (ngSubmit) = onSubmit() class="form">
+            <div>
+                <label for="userName">User Name:</label>
+                <br>
+                <input type="text" id = "userName" class="form-control" formControlName= "userName">
+                <div *ngIf="!form.get('userName')?.valid && form.get('userName')?.touched" class="error-message">enter user name</div>
+                <div *ngIf="form.get('userName')?.hasError('takenName') && form.get('userName')?.touched"  class="error-message">user name taken.</div>
+            </div>
+            <div>
+                <label for="password">password:</label>
+                <br>
+                <input type="password" id = "password" class="form-control" formControlName = "password">
+                <div *ngIf="!form.get('password')?.valid && form.get('password')?.touched" class="error-message">weak password, please try again.</div>
+            </div>
+            <div>
+                <label for="repeatPassword">Repeat the password:</label>
+                <br>
+                <input type="password" id = "repeatPassword" class="form-control" formControlName = "repeatPassword">
+                <div *ngIf="form.errors?.['mismatch'] && form.get('repeatPassword')?.touched"  class="error-message">Passwords do not match, please try again.</div>
+            </div>
+            <div class="flex-row">
+                <div class="log-in-link" (click)="onClickLogin()">Log-in</div>
+                <button type="submit" [disabled] = "!form.valid">Sign-up</button>
+            </div>
+        </form>
+    </div>    
+</div>

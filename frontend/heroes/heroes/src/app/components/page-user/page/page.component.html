@@ -1,0 +1,18 @@
+<div class="header">Heroes
+    <button class="account-btn" (click)="onClickAccount()">my account</button>
+    <button class="log-out-btn" (click)="onClickLogOut()">Log-out</button>
+</div>
+
+<div class="container">
+    <div *ngFor="let hero of heroes" class="hero" (click)="AddToCart(hero.id)">
+        <img [src]= hero.urlImg class="img">
+        <div>Hero Name: {{hero.name}}</div>
+        <div>Ability: {{hero.heroAbility}}</div>
+        <div>Id: {{hero.id | slice:0:4}}</div>
+        <div>Started training on: {{hero.startedTraining}}</div>
+        <div>Suit Color: {{hero.suitColor}}</div>
+        <div>Starting Power: {{hero.startingPower}}</div>
+        <div>Current Power: {{hero.currentPower}}</div>
+        <div>Number of training: {{hero.dailyTrainingCount}}</div>
+    </div>
+</div>

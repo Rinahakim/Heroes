@@ -1,0 +1,83 @@
+:host{
+    height: 100vh;
+    width: 100vw; 
+}
+
+.header{
+    font-size: 40px;
+    text-align: center;
+    background-color: rgba(218, 156, 130, 0.546);
+    width: 100%;
+    padding: 15px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.align-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20%;
+}
+
+.log-in-link{
+    color: blue;
+    cursor: pointer;
+}
+
+.log-in-link:hover{
+    color: brown;
+}
+
+.container{
+    border: 5px solid blue;
+    height: 30%;
+    width: 40%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 10px;
+    color: rgb(177, 119, 119);
+    font-weight: 700;
+    background-color: rgba(95, 158, 160, 0.463);
+}
+
+.flex-row{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.form{
+    width: 98%;
+}
+
+input{
+    border-radius: 10px;
+    width: 100%;
+    height: 25px;
+    margin-top: 5px;
+}
+.error-message{
+    color: red;
+    text-align: center;
+}
+.flex-row >:last-child{
+    border-radius: 10px;
+    width: 30%;
+    height: 40px;
+    background-color: blue;
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.flex-row >:last-child:hover{
+    background-color: brown;
+}
+
+@media(max-width: 400px){
+    .container{
+        width: 60%;
+    }
+}
